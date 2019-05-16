@@ -12,19 +12,20 @@ export class EditContactPage {
   key: string;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private contactProvider: ContactService, private toast: ToastController) {
-    if (this.navParams.data.contact && this.navParams.data.key) {
+   /* if (this.navParams.data.contact && this.navParams.data.key) {
       this.model = this.navParams.data.contact;
       this.key =  this.navParams.data.key;
     } else {
       this.model = new Contact();
     }
+    */
   }
 
   save() {
     this.saveContact()
       .then(() => {
         this.showToast('Item adicionado!')
-        this.navCtrl.pop();
+        
       })
       .catch(() => {
         this.showToast('Erro ao adicionar')

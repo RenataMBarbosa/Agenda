@@ -22,11 +22,11 @@ export class HomePage {
   }
 
   addContact() {
-    this.router.navigateByUrl ('/EditContactPage');
+    this.router.navigate (['edit-contact']);
   }
 
   editContact(item: ContactList) {
-    this.router.navigateByUrl('/EditContactPage' /*{ key: item.key, contact: item.contact }*/);
+    this.router.navigate(['/edit-contact', { key: item.key, contact: item.contact }]);
   }
 
   removeContact(item: ContactList) {
